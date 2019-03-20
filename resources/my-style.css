@@ -1,0 +1,135 @@
+#consent {
+    height: 100%;
+    max-width: 800px;
+    display: table;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+pre {
+  text-align: left;
+}
+
+#consent a {
+    color: #4dac26;
+}
+
+#consent_form > label {
+    font-weight: 900;
+}
+
+#consent_body {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    box-shadow: 0 0 0 1px;
+}
+
+
+#consent_form {
+    margin: .5em;
+}
+
+p {
+    text-align:justify;
+    text-indent: 50px;
+    max-width: 800px;
+}
+
+#consent_checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+#consent_label {
+    position: relative;
+}
+
+#consent_checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#consent_checkbox + #consent_label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#consent_checkbox:checked + #consent_label:before {
+    background: black;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+.jspsych-btn {
+    margin: 0.5em;
+}
+
+.next-btn {
+    font-size: 120px;
+    height: 180px; 
+    width: 180px; 
+    margin: -90px -90px; 
+    position:relative;
+    top:50%; 
+    left:0%;
+    background-color: black;
+    border: none;
+    color: yellow;
+}
+
+.next-btn:hover {
+    font-size: 120px;
+    height: 180px; 
+    width: 180px; 
+    margin: -90px -90px; 
+    position:relative;
+    top:50%; 
+    left:0%;
+    background-color: black; /* Green */
+    border: none;
+    color: yellow;
+}
+
+.left {
+    text-align: left;
+}
+
+#jspsych-survey-dropdown-form {
+    max-width: 800px;
+}
+
+.jspsych-survey-dropdown-question {
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.jspsych-survey-dropdown-select,
+.jspsych-survey-dropdown-text {
+    display: inline;
+    vertical-align: top;
+    line-height: 28px;
+    border: 0;
+    margin: auto;
+    padding: 5px;
+    width: 150px;
+}
+
+.jspsych-survey-dropdown-select {
+    float: right;
+}
+
+#jspsych-loading-progress-bar-container {
+    display: none;
+}
