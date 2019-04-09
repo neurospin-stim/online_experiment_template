@@ -2,7 +2,7 @@
  * jspsych-survey-dropdown
  * a jspsych plugin for multiple choice survey questions
  *
- * Mathias Sablé Meyer, inspired by multi-choice from Shane Martin
+ * Mathias Sablé-Meyer, inspired by multi-choice from Shane Martin
  *
  * documentation: docs.jspsych.org
  *
