@@ -34,19 +34,24 @@ var survey = {
 // This forces jsPsych to wait for resources to be loaded before starting the
 // experiment. Otherwise unpredictable behaviour ensue.
 document.addEventListener("DOMContentLoaded", function(event) {
-    // This detects touch event, a good way to rule out phone users although you
-    // will also rule out Stan ;p
+    // This detects touch events and register them
     window.USER_IS_TOUCHING = false;
     window.addEventListener('touchstart', function registerTouch() {
         window.USER_IS_TOUCHING = true;
         window.removeEventListener('touchstart', registerTouch, false);
     }, false);
 
+    // This is required. Check the wiki for more information as to why.
+    sendData(subjectID, "testUser", "testProject", "ping");
+
     // There we go, we can start the experiment.
     jsPsych.init({
         timeline: [consent, survey, instructions],
         on_finish: function() {
-            SaveData("name_of_the_exp", subjectID, jsPsych.data.get().csv());
+            final_data = jsPsych.data.get().csv();
+            sendData(subjectID, "testUser", "testProject", final_data);
+            document.getElementById("jspsych-content").innerHTML = "Merci de votre participation !";
+            document.getElementById("jspsych-content").innerHTML += "<br/><br/>data:<br/><pre>" + final_data + "</pre>";
         }
     });
 });
