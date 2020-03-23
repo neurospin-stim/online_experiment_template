@@ -42,9 +42,16 @@ for (i = 0 ; i < randomized_parameters.length ; i++) {
   var one_trial = {
     type: 'image-keyboard-response',
     stimulus: 'img/'+randomized_parameters[i]+'.png',
-    choices: ['f', 'j']
+    choices: ['f', 'j'],
+  };
+  var padding = {
+    type: 'image-keyboard-response',
+    stimulus: 'img/empty.png',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 500
   };
   global_timeline.push(one_trial);
+  global_timeline.push(padding);
 }
 
 console.log(global_timeline);
